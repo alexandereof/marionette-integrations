@@ -34,7 +34,7 @@ var build = function () {
 
 var copy = function () {
     return gulp
-      .src(['app/assets/index.html', 'app/styles/app.css'])
+      .src(['app/assets/index.html', 'app/styles/app.css', 'app/styles/normalize.css', 'app/styles/skeleton.css'])
       .pipe(gulp.dest('public'))
       .pipe(browserSync.stream());
 };

@@ -1,7 +1,7 @@
-import {Marionette, $} from '../../vendor/vendor';
+import View from '../core/View';
 import template from '../templates/item.jst';
 
-export default Marionette.View.extend({
+export default View.extend({
   template: template,
 
   initialize: function() {
@@ -20,6 +20,10 @@ export default Marionette.View.extend({
 
   saveForm: function(ev) {
     alert('event click' + this.properties.name);
+  },
+
+  moduleEvents:{
+    'personal:event': 'saveForm'
   }
 
 });
